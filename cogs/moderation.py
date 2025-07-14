@@ -76,8 +76,7 @@ class Moderation(commands.Cog):
         usuario='Clean messages from a specific user (optional)'
     )
     async def clear(self, interaction: discord.Interaction, cantidad: int, usuario: discord.Member = None):
-        """Comando slash para limpiar mensajes"""
-        
+
         if not interaction.user.guild_permissions.manage_messages:
             await interaction.response.send_message("❌ You dont have permission to clean channel", ephemeral=True) #Si no tiene permisos
             return
